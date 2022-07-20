@@ -256,8 +256,21 @@ void modifyPerson(Addressbooks* abs)
 //6、清空联系人
 void clearPerson(Addressbooks* abs)
 {
-	abs->m_Size = 0;
-	cout << "通讯录已清空！" << endl;
+	cout << "请确认是否删除全部联系人！！！ " << endl;
+	cout << "输入YES或者NO" << endl;
+	string name;
+	cin >> name;
+	if (name == "YES")
+	{
+		abs->m_Size = 0;
+		cout << "通讯录已清空！" << endl;
+	}
+	else
+	{
+		cout << "删除操作取消！" << endl;
+	}
+
+	
 
 	//清屏
 	system("pause"); //请按任意键继续
